@@ -1,0 +1,35 @@
+{
+  "name": "self-analysis-ai-platform",
+  "version": "1.0.0",
+  "description": "The personal self-analysis platform with AI seeks to be a tool that helps the user to better understand itself through the analysis of personal data (text, habits, goals, performance) using artificial intelligence. - 1. Intelligent analytics: Apply AI to detect patterns, trends, biases, or inconsistencies. 2. Actionable feedback: Offer suggestions, metrics, or visualizations that can be used to make decisions or improve habits. 3. Personalization: Adapt and evolve based on the user over time. 4. Privacy and control: Ensure that data belongs to the user and is processed securely.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rbrtpv/self-analysis-ai-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rbrtpv/self-analysis-ai-platform/issues"
+  },
+  "homepage": "https://github.com/Rbrtpv/self-analysis-ai-platform#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.1",
+    "@types/node-fetch": "^2.6.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
