@@ -1,20 +1,33 @@
 import express, { Request, Response } from "express";
 import fetch from "node-fetch";
+import path from "path";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Backend with TypeScript" });
-});
+app.use(express.json()); 
+app.use(express.static(path.join(process.cwd(), "public")));
 
-app.get("/ai", async (req: Request, res: Response) => {
+app.post("/ai", async (req: Request, res: Response) => {
   try {
-    const response = await fetch("http://ai:5000/predict");
+    const { text } = req.body;
+    if (!text) {
+      return res.status(400).json({ error: "No text provided for analysis" });
+    }
+
+    const response = await fetch("http://ai:5000/predict", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text }),
+    });
+
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: "AI service not available" });
+    console.error(err);
+    res.status(500).json({ error: "AI service not available or internal server error" });
   }
 });
 
