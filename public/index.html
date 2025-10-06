@@ -12,6 +12,36 @@
         <p>Write the text you want to analyze and press the button.</p>
         <textarea id="text-input" rows="10" placeholder="Write here..."></textarea>
         <button id="analyze-btn">Analyze</button>
+        <section id="questionnaire-section">
+            <h2>Key questions:</h2>
+            <form id="questionnaire-form">
+                <div class="question-group">
+                    <p>1. ?</p>
+                    <label><input type="radio" name="q1" value="1.">1.</label><br>
+                    <label><input type="radio" name="q1" value="2.">2.</label><br>
+                    <label><input type="radio" name="q1" value="3.">3.</label><br>
+                    <label><input type="radio" name="q1" value="4.">4.</label><br>
+                    <label><input type="radio" name="q1" value="5.">5.</label><br>
+                </div>
+                <div class="question-group">
+                    <p>2. ?</p>
+                    <label><input type="radio" name="q2" value="1.">1.</label><br>
+                    <label><input type="radio" name="q2" value="2.">2.</label><br>
+                    <label><input type="radio" name="q2" value="3.">3.</label><br>
+                    <label><input type="radio" name="q2" value="4.">4.</label><br>
+                    <label><input type="radio" name="q2" value="5.">5.</label><br>
+                </div>
+                <div class="question-group">
+                    <p>1. ?</p>
+                    <label><input type="radio" name="q3" value="1.">1.</label><br>
+                    <label><input type="radio" name="q3" value="2.">2.</label><br>
+                    <label><input type="radio" name="q3" value="3.">3.</label><br>
+                    <label><input type="radio" name="q3" value="4.">4.</label><br>
+                    <label><input type="radio" name="q3" value="5.">5.</label><br>
+                </div>
+                <button type="submit" id="submit-questionnaire-btn">send</button>
+            </form>
+        </section>
         <h2>Result:</h2>
         <pre id="result-output"></pre>
         <div id="error-message" class="error"></div>
